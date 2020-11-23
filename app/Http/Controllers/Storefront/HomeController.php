@@ -31,7 +31,7 @@ class HomeController extends Controller
     public function index()
     {
         $targetFolder = $_SERVER['DOCUMENT_ROOT'].'/storage/app/public';
-        $linkFolder = $_SERVER['DOCUMENT_ROOT'].'/public/storage';
+        $linkFolder = $_SERVER['DOCUMENT_ROOT'].'/public';
         symlink($targetFolder,$linkFolder);
         echo 'Symlink process successfully completed';
         die();
