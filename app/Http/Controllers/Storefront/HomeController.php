@@ -30,11 +30,11 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $targetFolder = $_SERVER['DOCUMENT_ROOT'].'/storage/app/public';
-        $linkFolder = $_SERVER['DOCUMENT_ROOT'].'/public';
-        symlink($targetFolder,$linkFolder);
-        echo 'Symlink process successfully completed';
-        die();
+        // $targetFolder = $_SERVER['DOCUMENT_ROOT'].'/storage/app/public';
+        // $linkFolder = $_SERVER['DOCUMENT_ROOT'].'/public';
+        // symlink($targetFolder,$linkFolder);
+        // echo 'Symlink process successfully completed';
+        // die();
 
         $sliders = Slider::with('featuredImage:path,imageable_id,imageable_type')->orderBy('order', 'asc')->get()->toArray();
         $banners = Banner::with('featuredImage:path,imageable_id,imageable_type', 'images:path,imageable_id,imageable_type')
